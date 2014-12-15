@@ -1,0 +1,27 @@
+size=30
+zoneid='6ba1c648-b924-4879-88a8-1c31c0bf9c43'
+networkid='d288457d-176a-44bb-827d-03102e026fe1'
+templateid='d0412f1e-e259-419e-92b0-0e0ea177626a'
+serviceofferingid='0d8c5fec-e1dc-4aa6-a62d-a9d4f69c3e06'
+diskofferingid='501251e7-c61a-4dba-badb-41a00569f55a'
+newtemplateid='d249b9a3-6e25-404e-8560-c0249a98ba29'
+
+
+sh create_vm.sh -z $zoneid -n $networkid -t $templateid -s $serviceofferingid -p $size
+echo "................................................................................................."
+
+sh attach_volume.sh -z $zoneid -d $diskofferingid
+echo "................................................................................................."
+
+sh restore_vm.sh -z $zoneid -n $networkid -t $newtemplateid
+echo "................................................................................................."
+
+sh clean_vm.sh -z $zoneid -n $networkid
+echo "................................................................................................."
+
+sh clean_volume.sh
+echo "................................................................................................."
+
+sh vpc_smoke.sh
+
+
