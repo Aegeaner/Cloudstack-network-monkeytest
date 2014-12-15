@@ -1,0 +1,5 @@
+NetworkOfferingId = '8d648af4-ceb9-4640-bded-7e2ce3a7a699' 
+ZoneId = 'b9a0dc27-cea5-4602-9bdc-eef68412df46' 
+VMServiceOfferingId = '12e34e93-e786-48f6-a66c-8b3f9aa3e0ff' 
+TemplateId = '7f233e45-c9de-40d7-900e-496758ee3c50'
+DisplayText = 'Just a test.'
